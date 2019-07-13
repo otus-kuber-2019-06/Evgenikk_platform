@@ -11,13 +11,13 @@ kubectl apply -f web-pod.yaml && kubectl get pods -w
 ```
 #### Как запускаются элементы k8s в minikube
 ```
- pixel@Evgeniys-MacBook-Pro  ~/git_workspace/otus/Evgenikk_platform   master  kubectl get ds -n kube-system                                               ✔  516  14:56:12
+ pixel@Evgeniys-MacBook-Pro ~/git_workspace/otus/Evgenikk_platform kubectl get ds -n kube-system                               
 NAME         DESIRED   CURRENT   READY     UP-TO-DATE   AVAILABLE   NODE SELECTOR                 AGE
 kube-proxy   1         1         1         1            1           beta.kubernetes.io/os=linux   45m
 ```
 
 ```
- pixel@Evgeniys-MacBook-Pro  ~/git_workspace/otus/Evgenikk_platform   master  kubectl get deployment -n kube-system                                       ✔  517  14:59:43
+ pixel@Evgeniys-MacBook-Pro  ~/git_workspace/otus/Evgenikk_platform  kubectl get deployment -n kube-system       
 NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 coredns   2         2         2            2           47m
 ```
