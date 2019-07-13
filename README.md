@@ -1,7 +1,15 @@
 # Evgenikk_platform
 Evgenikk Platform repository
+### kubernetes-intro
 
-### Как запускаются элементы k8s в minikube
+minikube pods initcontainer
+Полезные команды:
+
+```
+kubectl logs pod-name -c container-name # Inspect the first init container
+kubectl apply -f web-pod.yaml && kubectl get pods -w
+```
+#### Как запускаются элементы k8s в minikube
 ```
  pixel@Evgeniys-MacBook-Pro  ~/git_workspace/otus/Evgenikk_platform   master  kubectl get ds -n kube-system                                               ✔  516  14:56:12
 NAME         DESIRED   CURRENT   READY     UP-TO-DATE   AVAILABLE   NODE SELECTOR                 AGE
