@@ -15,5 +15,5 @@ spec:
       serviceAccountName: mysql-operator
       containers:
         - name: operator
-          image: "zhenkins/mysql-operator:v1.1"
+          image: "zhenkins/mysql-operator:v1.2"
           imagePullPolicy: "Always"

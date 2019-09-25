@@ -77,6 +77,7 @@ def mysql_on_create(body, spec, **kwargs):
     kopf.append_owner_reference(persistent_volume_claim, owner=body)  # addopt
     kopf.append_owner_reference(service, owner=body)
     kopf.append_owner_reference(deployment, owner=body)
+    kopf.append_owner_reference(restore_job, owner=body)
     # ^ Таким образом при удалении CR удалятся все, связанные с ним pv,pvc,svc, deployments
 
     api = kubernetes.client.CoreV1Api()
