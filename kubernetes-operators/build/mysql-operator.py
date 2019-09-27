@@ -35,8 +35,7 @@ def delete_success_jobs(mysql_instance_name):
     jobs = api.list_namespaced_job('default')
     for job in jobs.items:
         jobname = job.metadata.name
-        if (jobname == f"backup-{mysql_instance_name}-job") or \
-                (jobname == f"restore-{mysql_instance_name}-job"):
+        if (jobname == f"backup-{mysql_instance_name}-job"):
             if job.status.succeeded == 1:
                 api.delete_namespaced_job(jobname,
                                           'default',
