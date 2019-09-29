@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: front-end
+  labels:
+    name: front-end
+spec:
+  type: {{ .Values.service.type | default "NodePort" }}
+  ports:
+  - port: {{ .Values.service.port | default "80" }}
+    targetPort: {{ .Values.service.targetPort | default "8079" }}
+    {{- if eq .Values.service.type  "NodePort" }}
+    nodePort: {{ .Values.service.nodePort | default "30001" }}
+    {{- end }}
+  selector:
+    name: front-end
