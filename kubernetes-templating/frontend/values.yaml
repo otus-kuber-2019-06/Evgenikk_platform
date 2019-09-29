@@ -1,0 +1,7 @@
+image:
+  tag: 0.3.12
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8079
+  NodePort: 30001
